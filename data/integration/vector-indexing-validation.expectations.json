@@ -1,0 +1,19 @@
+{
+  "data_classification": "repository-authored-synthetic",
+  "license": "MIT",
+  "expected_client": "internal",
+  "expected_environment": "dev",
+  "expected_namespace": "data-engineering-integration",
+  "expected_domain": "integration-validation",
+  "expected_collection": "internal_dev_integration",
+  "embedding_dimensions": 1024,
+  "chunk_size": 1000,
+  "chunk_overlap": 100,
+  "expected_chunk_count": 4,
+  "retrieval_phrases": [
+    "cobalt heron checkpoint",
+    "amber lattice retry",
+    "quartz compass namespace",
+    "silver orchard ready"
+  ]
+}

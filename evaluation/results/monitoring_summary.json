@@ -1,0 +1,548 @@
+{
+  "by_client": {
+    "demo-client-a": {
+      "error_count": 2,
+      "event_count": 142,
+      "event_success_rate": 0.985915,
+      "feedback_count": 21,
+      "request_count": 42
+    },
+    "demo-client-b": {
+      "error_count": 2,
+      "event_count": 133,
+      "event_success_rate": 0.984962,
+      "feedback_count": 21,
+      "request_count": 42
+    }
+  },
+  "by_environment": {
+    "dev": {
+      "error_count": 2,
+      "event_count": 142,
+      "event_success_rate": 0.985915,
+      "feedback_count": 21,
+      "request_count": 42
+    },
+    "test": {
+      "error_count": 2,
+      "event_count": 133,
+      "event_success_rate": 0.984962,
+      "feedback_count": 21,
+      "request_count": 42
+    }
+  },
+  "by_event_type": {
+    "application_error": 4,
+    "application_request": 84,
+    "approval_requirement": 9,
+    "evaluation_run": 3,
+    "llm_completion": 62,
+    "retrieval_completion": 62,
+    "safety_decision": 9,
+    "user_feedback": 42
+  },
+  "by_intent": {
+    "architecture_design": {
+      "application_error_rate": 0.1,
+      "feedback_count": 0,
+      "positive_feedback_rate": 0.0,
+      "request_count": 10
+    },
+    "deployment_request": {
+      "application_error_rate": 0.0,
+      "feedback_count": 9,
+      "positive_feedback_rate": 0.777778,
+      "request_count": 9
+    },
+    "destructive_action_request": {
+      "application_error_rate": 0.0,
+      "feedback_count": 5,
+      "positive_feedback_rate": 0.8,
+      "request_count": 9
+    },
+    "iam_review": {
+      "application_error_rate": 0.0,
+      "feedback_count": 0,
+      "positive_feedback_rate": 0.0,
+      "request_count": 9
+    },
+    "knowledge_question": {
+      "application_error_rate": 0.111111,
+      "feedback_count": 9,
+      "positive_feedback_rate": 0.666667,
+      "request_count": 9
+    },
+    "monitoring_request": {
+      "application_error_rate": 0.0,
+      "feedback_count": 0,
+      "positive_feedback_rate": 0.0,
+      "request_count": 9
+    },
+    "pipeline_troubleshooting": {
+      "application_error_rate": 0.1,
+      "feedback_count": 0,
+      "positive_feedback_rate": 0.0,
+      "request_count": 10
+    },
+    "pyspark_generation": {
+      "application_error_rate": 0.0,
+      "feedback_count": 9,
+      "positive_feedback_rate": 0.777778,
+      "request_count": 9
+    },
+    "sql_generation": {
+      "application_error_rate": 0.1,
+      "feedback_count": 10,
+      "positive_feedback_rate": 0.7,
+      "request_count": 10
+    }
+  },
+  "by_prompt_strategy": {
+    "baseline-concise": {
+      "average_estimated_cost_usd": "0.0003481818181818181818181818182",
+      "average_input_tokens": 495.0,
+      "average_output_tokens": 179.545455,
+      "average_total_tokens": 674.545455,
+      "citation_completeness_rate": 0.85,
+      "completion_count": 22,
+      "feedback_count": 9,
+      "generation_latency_ms": {
+        "average": 272.863636,
+        "maximum": 1401.0,
+        "p50": 151.0,
+        "p95": 1387.0
+      },
+      "grounded_response_rate": 0.95,
+      "latency_ms": {
+        "average": 390.681818,
+        "maximum": 2112.5,
+        "p50": 224.5,
+        "p95": 2091.0
+      },
+      "positive_feedback_rate": 0.777778,
+      "total_estimated_cost_usd": "0.00766000"
+    },
+    "grounded-evidence-first": {
+      "average_estimated_cost_usd": "0.0002917647058823529411764705882",
+      "average_input_tokens": 421.470588,
+      "average_output_tokens": 149.117647,
+      "average_total_tokens": 570.588235,
+      "citation_completeness_rate": 0.875,
+      "completion_count": 17,
+      "feedback_count": 7,
+      "generation_latency_ms": {
+        "average": 305.0,
+        "maximum": 1373.0,
+        "p50": 199.0,
+        "p95": 1373.0
+      },
+      "grounded_response_rate": 1.0,
+      "latency_ms": {
+        "average": 427.911765,
+        "maximum": 2088.0,
+        "p50": 239.5,
+        "p95": 2088.0
+      },
+      "positive_feedback_rate": 0.857143,
+      "total_estimated_cost_usd": "0.00496000"
+    },
+    "structured-troubleshooting": {
+      "average_estimated_cost_usd": "0.0005175543478260869565217391304",
+      "average_input_tokens": 648.478261,
+      "average_output_tokens": 284.347826,
+      "average_total_tokens": 932.826087,
+      "citation_completeness_rate": 0.9,
+      "completion_count": 23,
+      "feedback_count": 10,
+      "generation_latency_ms": {
+        "average": 280.521739,
+        "maximum": 1484.0,
+        "p50": 144.0,
+        "p95": 1456.0
+      },
+      "grounded_response_rate": 1.0,
+      "latency_ms": {
+        "average": 395.130435,
+        "maximum": 2190.5,
+        "p50": 207.0,
+        "p95": 2188.0
+      },
+      "positive_feedback_rate": 0.7,
+      "total_estimated_cost_usd": "0.01190375"
+    }
+  },
+  "by_response_mode": {
+    "concise": {
+      "average_estimated_cost_usd": "0.0003352142857142857142857142857",
+      "average_total_tokens": 693.428571,
+      "completion_count": 35,
+      "latency_ms": {
+        "average": 395.528571,
+        "maximum": 2112.5,
+        "p50": 177.0,
+        "p95": 2091.0
+      }
+    },
+    "detailed": {
+      "average_estimated_cost_usd": "0.00047375",
+      "average_total_tokens": 804.62963,
+      "completion_count": 27,
+      "latency_ms": {
+        "average": 411.62963,
+        "maximum": 2190.5,
+        "p50": 272.5,
+        "p95": 2188.0
+      }
+    }
+  },
+  "by_retrieval_strategy": {
+    "hybrid": {
+      "average_estimated_cost_usd": "0.000463203125",
+      "average_source_count": 2.75,
+      "average_total_tokens": 856.5625,
+      "completion_count": 16,
+      "latency_ms": {
+        "average": 161.1875,
+        "maximum": 732.0,
+        "p50": 79.5,
+        "p95": 732.0
+      },
+      "no_result_rate": 0.125,
+      "success_rate": 1.0
+    },
+    "keyword": {
+      "average_estimated_cost_usd": "0.0003441477272727272727272727273",
+      "average_source_count": 2.909091,
+      "average_total_tokens": 657.5,
+      "completion_count": 22,
+      "latency_ms": {
+        "average": 94.840909,
+        "maximum": 690.0,
+        "p50": 36.5,
+        "p95": 684.5
+      },
+      "no_result_rate": 0.090909,
+      "success_rate": 1.0
+    },
+    "semantic": {
+      "average_estimated_cost_usd": "0.0003975520833333333333333333333",
+      "average_source_count": 2.916667,
+      "average_total_tokens": 742.708333,
+      "completion_count": 24,
+      "latency_ms": {
+        "average": 110.5,
+        "maximum": 715.0,
+        "p50": 56.0,
+        "p95": 706.5
+      },
+      "no_result_rate": 0.083333,
+      "success_rate": 1.0
+    }
+  },
+  "by_runtime_mode": {
+    "offline-synthetic": {
+      "error_count": 4,
+      "event_count": 275,
+      "event_success_rate": 0.985455,
+      "feedback_count": 42,
+      "request_count": 84
+    }
+  },
+  "by_safety_outcome": {
+    "allowed": {
+      "error_count": 0,
+      "event_count": 62,
+      "event_success_rate": 1.0,
+      "feedback_count": 0,
+      "request_count": 0
+    },
+    "approval_required": {
+      "error_count": 0,
+      "event_count": 9,
+      "event_success_rate": 1.0,
+      "feedback_count": 0,
+      "request_count": 0
+    },
+    "blocked": {
+      "error_count": 0,
+      "event_count": 9,
+      "event_success_rate": 1.0,
+      "feedback_count": 0,
+      "request_count": 0
+    }
+  },
+  "by_scope": {
+    "demo-client-a/dev": {
+      "error_count": 2,
+      "event_count": 142,
+      "feedback_count": 21,
+      "request_count": 42
+    },
+    "demo-client-b/test": {
+      "error_count": 2,
+      "event_count": 133,
+      "feedback_count": 21,
+      "request_count": 42
+    }
+  },
+  "daily": [
+    {
+      "date": "2026-07-01",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00113750",
+      "event_count": 14,
+      "feedback_count": 2,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 1,
+      "request_count": 4
+    },
+    {
+      "date": "2026-07-02",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00101625",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 3,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-03",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00302250",
+      "event_count": 20,
+      "feedback_count": 3,
+      "llm_completion_count": 5,
+      "positive_feedback_count": 3,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-04",
+      "error_count": 1,
+      "estimated_cost_usd": "0.00115500",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 0,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-05",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00258375",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 3,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-06",
+      "error_count": 1,
+      "estimated_cost_usd": "0.00100250",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 3,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-07",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00107125",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 2,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-08",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00273750",
+      "event_count": 20,
+      "feedback_count": 3,
+      "llm_completion_count": 5,
+      "positive_feedback_count": 2,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-09",
+      "error_count": 1,
+      "estimated_cost_usd": "0.00123125",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 3,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-10",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00096250",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 3,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-11",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00119500",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 1,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-12",
+      "error_count": 1,
+      "estimated_cost_usd": "0.00272625",
+      "event_count": 20,
+      "feedback_count": 3,
+      "llm_completion_count": 5,
+      "positive_feedback_count": 2,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-13",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00149625",
+      "event_count": 20,
+      "feedback_count": 3,
+      "llm_completion_count": 5,
+      "positive_feedback_count": 3,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-14",
+      "error_count": 0,
+      "estimated_cost_usd": "0.00096375",
+      "event_count": 19,
+      "feedback_count": 3,
+      "llm_completion_count": 4,
+      "positive_feedback_count": 1,
+      "request_count": 6
+    },
+    {
+      "date": "2026-07-15",
+      "error_count": 0,
+      "estimated_cost_usd": "0.0022225",
+      "event_count": 10,
+      "feedback_count": 1,
+      "llm_completion_count": 2,
+      "positive_feedback_count": 1,
+      "request_count": 2
+    }
+  ],
+  "error_categories": {
+    "malformed_provider_response": 2,
+    "provider_timeout": 2
+  },
+  "evaluation_runs": [
+    {
+      "client_id": "demo-client-a",
+      "environment": "dev",
+      "evaluation_name": "retrieval-comparison",
+      "event_id": "synthetic-event-0273",
+      "success": true,
+      "timestamp": "2026-07-15T08:00:00Z"
+    },
+    {
+      "client_id": "demo-client-b",
+      "environment": "test",
+      "evaluation_name": "prompt-comparison",
+      "event_id": "synthetic-event-0274",
+      "success": true,
+      "timestamp": "2026-07-15T08:01:00Z"
+    },
+    {
+      "client_id": "demo-client-a",
+      "environment": "dev",
+      "evaluation_name": "monitoring-analysis",
+      "event_id": "synthetic-event-0275",
+      "success": true,
+      "timestamp": "2026-07-15T08:02:00Z"
+    }
+  ],
+  "metadata": {
+    "analysis_version": "offline-monitoring-analysis-v1",
+    "data_classification": "synthetic",
+    "dataset_versions": [
+      "synthetic-monitoring-v1"
+    ],
+    "estimated_cost_is_simulated": true,
+    "evaluation_date": "2026-07-27T00:00:00Z",
+    "event_schema_version": 1,
+    "git_commit": "abae42de9f192a09ce9e16874a478019480bec04",
+    "malformed_record_count": 0,
+    "network_calls": false,
+    "provider_charges_incurred": false,
+    "python_version": "3.12.10",
+    "raw_document_text_included": false,
+    "raw_feedback_included_in_report": false,
+    "raw_prompts_included": false
+  },
+  "overview": {
+    "application_error_rate": 0.047619,
+    "approval_required_count": 9,
+    "approval_requirement_rate": 0.107143,
+    "average_estimated_cost_per_request_usd": "0.0002919494047619047619047619048",
+    "average_estimated_cost_usd": "0.0003955443548387096774193548387",
+    "average_generation_latency_ms": 284.516129,
+    "average_input_tokens": 531.774194,
+    "average_latency_ms": 402.540323,
+    "average_output_tokens": 210.080645,
+    "average_rating": 0.738095,
+    "average_retrieval_latency_ms": 118.024194,
+    "average_total_tokens": 741.854839,
+    "citation_completeness_rate": 0.875,
+    "event_count": 275,
+    "feedback_coverage_rate": 0.5,
+    "feedback_rate": 0.5,
+    "generation_latency_ms": {
+      "average": 284.516129,
+      "maximum": 1484.0,
+      "p50": 151.0,
+      "p95": 1387.0
+    },
+    "grounded_response_rate": 0.982143,
+    "high_cost_request_rate": 0.080645,
+    "llm_completion_count": 62,
+    "negative_feedback_rate": 0.261905,
+    "no_result_rate": 0.096774,
+    "p50_latency_ms": 225.0,
+    "p95_latency_ms": 2091.0,
+    "positive_feedback_rate": 0.738095,
+    "request_count": 84,
+    "request_latency_ms": {
+      "average": 402.540323,
+      "maximum": 2190.5,
+      "p50": 225.0,
+      "p95": 2091.0
+    },
+    "request_success_rate": 0.952381,
+    "retrieval_latency_ms": {
+      "average": 118.024194,
+      "maximum": 732.0,
+      "p50": 55.5,
+      "p95": 706.5
+    },
+    "safety_block_rate": 0.107143,
+    "safety_event_count": 9,
+    "scope_count": 2,
+    "session_count": 22,
+    "slow_request_rate": 0.096774,
+    "total_estimated_cost_usd": "0.02452375",
+    "total_input_tokens": 32970,
+    "total_output_tokens": 13025,
+    "total_tokens": 45995
+  },
+  "schema_version": 1,
+  "thresholds": {
+    "high_cost_threshold_usd": "0.001",
+    "slow_request_threshold_ms": 1000.0
+  }
+}

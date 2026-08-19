@@ -1,0 +1,2 @@
+# Python 3.12 Lambda layer runtime dependency.
+qdrant-client==1.18.0

@@ -1,0 +1,57 @@
+# Generated application output
+out.json
+response.json
+*.log
+data/monitoring/*.jsonl
+data/monitoring/**/*.jsonl
+data/bookkeeping/local/
+data/bookkeeping/*.private.csv
+
+# Python caches, coverage, environments, and build output
+**/__pycache__/
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+**/.mypy_cache/
+.ruff_cache/
+**/.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+__pypackages__/
+
+# AWS CDK output
+.cdk.staging/
+cdk.out/
+
+# Reviewed local Lambda layer build output
+/build/
+config/*.local.json
+
+# Local configuration and credentials
+.env
+.local/
+.env.*
+!.env.example
+compose.*.local.yaml
+.aws/
+**/.aws/
+.streamlit/secrets.toml
+credentials
+**/credentials
+*.pem
+*.key
+*.p12
+
+# Editors and operating systems
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+.vs/

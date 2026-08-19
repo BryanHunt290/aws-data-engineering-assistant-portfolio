@@ -1,0 +1,7 @@
+strategy_type,strategy,completion_count,success_rate,no_result_rate,citation_completeness_rate,positive_feedback_rate,average_latency_ms,p95_latency_ms,average_total_tokens,average_estimated_cost_usd
+retrieval,hybrid,16,1.0,0.125,,,161.1875,732.0,856.5625,0.000463203125
+retrieval,keyword,22,1.0,0.090909,,,94.840909,684.5,657.5,0.0003441477272727272727272727273
+retrieval,semantic,24,1.0,0.083333,,,110.5,706.5,742.708333,0.0003975520833333333333333333333
+prompt,baseline-concise,22,,,0.85,0.777778,390.681818,2091.0,674.545455,0.0003481818181818181818181818182
+prompt,grounded-evidence-first,17,,,0.875,0.857143,427.911765,2088.0,570.588235,0.0002917647058823529411764705882
+prompt,structured-troubleshooting,23,,,0.9,0.7,395.130435,2188.0,932.826087,0.0005175543478260869565217391304

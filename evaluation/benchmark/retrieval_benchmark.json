@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "benchmark_version": "retrieval-benchmark-v1",
+  "corpus_version": "synthetic-demo-corpus-v1",
+  "license": "CC0-1.0",
+  "description": "Synthetic retrieval queries written for deterministic Data Engineering Assistant evaluation.",
+  "scope": {
+    "client_id": "demo-client",
+    "environment": "dev"
+  },
+  "queries": [
+    {
+      "query_id": "s3-exact-zones",
+      "query": "S3 landing validated curated and query result data prefixes",
+      "expected_document_ids": ["demo-s3-data-lake-architecture"],
+      "expected_chunk_ids": [],
+      "category": "s3_architecture",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Uses the storage-zone vocabulary from the synthetic S3 guide."
+    },
+    {
+      "query_id": "s3-exact-controls",
+      "query": "block public access encryption versioning lifecycle rules",
+      "expected_document_ids": ["demo-s3-data-lake-architecture"],
+      "expected_chunk_ids": [],
+      "category": "s3_architecture",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Targets exact S3 security and retention controls."
+    },
+    {
+      "query_id": "s3-paraphrase-layout",
+      "query": "How should object storage be separated from arrival through analytics-ready data?",
+      "expected_document_ids": ["demo-s3-data-lake-architecture"],
+      "expected_chunk_ids": [],
+      "category": "s3_architecture",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Rephrases landing and curated zones without their exact labels."
+    },
+    {
+      "query_id": "s3-ambiguous-landing",
+      "query": "What belongs in the landing zone?",
+      "expected_document_ids": ["demo-s3-data-lake-architecture"],
+      "expected_chunk_ids": [],
+      "category": "s3_architecture",
+      "difficulty": "medium",
+      "match_type": "ambiguous",
+      "notes": "Landing could be a general architecture term."
+    },
+    {
+      "query_id": "s3-paraphrase-immutability",
+      "query": "Keep source objects unchanged before validation and transformation",
+      "expected_document_ids": ["demo-s3-data-lake-architecture"],
+      "expected_chunk_ids": [],
+      "category": "s3_architecture",
+      "difficulty": "medium",
+      "match_type": "paraphrase",
+      "notes": "Tests the immutable-ingestion concept."
+    },
+    {
+      "query_id": "glue-exact-access-denied",
+      "query": "Glue job AccessDenied execution role trust policy bucket policy KMS key policy",
+      "expected_document_ids": ["demo-glue-job-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "glue_troubleshooting",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Uses the exact authorization checklist."
+    },
+    {
+      "query_id": "glue-exact-first-error",
+      "query": "first meaningful CloudWatch error failed run identifier job arguments",
+      "expected_document_ids": ["demo-glue-job-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "glue_troubleshooting",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Targets the documented troubleshooting sequence."
+    },
+    {
+      "query_id": "glue-paraphrase-input",
+      "query": "My managed ETL task cannot read its input objects; where should I investigate?",
+      "expected_document_ids": ["demo-glue-job-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "glue_troubleshooting",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Avoids the Glue and AccessDenied terms."
+    },
+    {
+      "query_id": "glue-ambiguous-workers",
+      "query": "The workers are exhausted during processing",
+      "expected_document_ids": ["demo-glue-job-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "glue_troubleshooting",
+      "difficulty": "medium",
+      "match_type": "ambiguous",
+      "notes": "Workers could refer to several compute systems."
+    },
+    {
+      "query_id": "glue-paraphrase-last-success",
+      "query": "Compare a failed data integration run with the most recent successful one",
+      "expected_document_ids": ["demo-glue-job-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "glue_troubleshooting",
+      "difficulty": "medium",
+      "match_type": "paraphrase",
+      "notes": "Tests run-comparison guidance."
+    },
+    {
+      "query_id": "athena-exact-execution",
+      "query": "Athena query execution ID selected workgroup output location database table definition",
+      "expected_document_ids": ["demo-athena-query-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "athena_troubleshooting",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Uses exact query diagnostic fields."
+    },
+    {
+      "query_id": "athena-exact-partitions",
+      "query": "partition projection repair physical S3 layout schema mismatch",
+      "expected_document_ids": ["demo-athena-query-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "athena_troubleshooting",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Targets catalog and partition diagnostics."
+    },
+    {
+      "query_id": "athena-paraphrase-scan",
+      "query": "How can serverless SQL read fewer bytes and finish more cheaply?",
+      "expected_document_ids": ["demo-athena-query-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "athena_troubleshooting",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Rephrases Athena scan optimization."
+    },
+    {
+      "query_id": "athena-ambiguous-types",
+      "query": "Columns have inconsistent types across partitions",
+      "expected_document_ids": ["demo-athena-query-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "athena_troubleshooting",
+      "difficulty": "medium",
+      "match_type": "ambiguous",
+      "notes": "Could describe several schema systems."
+    },
+    {
+      "query_id": "athena-paraphrase-columnar",
+      "query": "Select only needed fields and store them in a compressed column-oriented format",
+      "expected_document_ids": ["demo-athena-query-troubleshooting"],
+      "expected_chunk_ids": [],
+      "category": "athena_troubleshooting",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Paraphrases column pruning and Parquet."
+    },
+    {
+      "query_id": "iam-exact-policy-types",
+      "query": "trust policy permission policies wildcard actions resources",
+      "expected_document_ids": ["demo-iam-least-privilege"],
+      "expected_chunk_ids": [],
+      "category": "iam_least_privilege",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Uses exact IAM policy vocabulary."
+    },
+    {
+      "query_id": "iam-exact-boundaries",
+      "query": "least privilege S3 prefixes Glue catalog CloudWatch Logs conditions",
+      "expected_document_ids": ["demo-iam-least-privilege"],
+      "expected_chunk_ids": [],
+      "category": "iam_least_privilege",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Targets resource-boundary recommendations."
+    },
+    {
+      "query_id": "iam-paraphrase-minimum",
+      "query": "How can a workload receive only the authority it actually needs?",
+      "expected_document_ids": ["demo-iam-least-privilege"],
+      "expected_chunk_ids": [],
+      "category": "iam_least_privilege",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Describes least privilege without naming it."
+    },
+    {
+      "query_id": "iam-ambiguous-assume",
+      "query": "Who is allowed to assume this role?",
+      "expected_document_ids": ["demo-iam-least-privilege"],
+      "expected_chunk_ids": [],
+      "category": "iam_least_privilege",
+      "difficulty": "medium",
+      "match_type": "ambiguous",
+      "notes": "Short trust-policy question."
+    },
+    {
+      "query_id": "iam-paraphrase-denial",
+      "query": "Use evidence from a rejected service call to narrow authorization",
+      "expected_document_ids": ["demo-iam-least-privilege"],
+      "expected_chunk_ids": [],
+      "category": "iam_least_privilege",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Paraphrases access-denied evidence."
+    },
+    {
+      "query_id": "pyspark-exact-dedup",
+      "query": "row number window partition business key stable tie breaker deduplication",
+      "expected_document_ids": ["demo-pyspark-transformations"],
+      "expected_chunk_ids": [],
+      "category": "pyspark_transformations",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Uses the deterministic deduplication recipe."
+    },
+    {
+      "query_id": "pyspark-exact-udf",
+      "query": "built in Spark SQL functions Python UDF collect driver repartition",
+      "expected_document_ids": ["demo-pyspark-transformations"],
+      "expected_chunk_ids": [],
+      "category": "pyspark_transformations",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Targets exact Spark implementation guidance."
+    },
+    {
+      "query_id": "pyspark-paraphrase-newest",
+      "query": "Keep the newest record for each customer without nondeterministic duplicate selection",
+      "expected_document_ids": ["demo-pyspark-transformations"],
+      "expected_chunk_ids": [],
+      "category": "pyspark_transformations",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Rephrases windowed deduplication."
+    },
+    {
+      "query_id": "pyspark-ambiguous-driver",
+      "query": "Should I collect everything to the driver?",
+      "expected_document_ids": ["demo-pyspark-transformations"],
+      "expected_chunk_ids": [],
+      "category": "pyspark_transformations",
+      "difficulty": "medium",
+      "match_type": "ambiguous",
+      "notes": "Driver could have non-Spark meanings."
+    },
+    {
+      "query_id": "pyspark-paraphrase-edge-cases",
+      "query": "Test late updates null identifiers malformed rows and empty datasets",
+      "expected_document_ids": ["demo-pyspark-transformations"],
+      "expected_chunk_ids": [],
+      "category": "pyspark_transformations",
+      "difficulty": "medium",
+      "match_type": "paraphrase",
+      "notes": "Rephrases transformation test cases."
+    },
+    {
+      "query_id": "monitoring-exact-signals",
+      "query": "pipeline freshness duration processed record rejected record data quality outcomes",
+      "expected_document_ids": ["demo-pipeline-monitoring"],
+      "expected_chunk_ids": [],
+      "category": "monitoring",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Uses exact pipeline monitoring signals."
+    },
+    {
+      "query_id": "monitoring-exact-failures",
+      "query": "Glue failures throttling worker exhaustion Lambda errors Athena query failures alarms",
+      "expected_document_ids": ["demo-pipeline-monitoring"],
+      "expected_chunk_ids": [],
+      "category": "monitoring",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Targets infrastructure signals and alarms."
+    },
+    {
+      "query_id": "monitoring-paraphrase-delay",
+      "query": "How do I distinguish a late upstream feed from a broken execution?",
+      "expected_document_ids": ["demo-pipeline-monitoring"],
+      "expected_chunk_ids": [],
+      "category": "monitoring",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Paraphrases delayed-input diagnosis."
+    },
+    {
+      "query_id": "monitoring-ambiguous-freshness",
+      "query": "The freshness objective was missed",
+      "expected_document_ids": ["demo-pipeline-monitoring"],
+      "expected_chunk_ids": [],
+      "category": "monitoring",
+      "difficulty": "medium",
+      "match_type": "ambiguous",
+      "notes": "Short freshness question without pipeline terminology."
+    },
+    {
+      "query_id": "monitoring-paraphrase-operations",
+      "query": "Define accountable responders escalation instructions and retry behavior",
+      "expected_document_ids": ["demo-pipeline-monitoring"],
+      "expected_chunk_ids": [],
+      "category": "monitoring",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Paraphrases owners, runbooks, and escalation paths."
+    },
+    {
+      "query_id": "cost-exact-inputs",
+      "query": "Glue worker type duration Athena files scanned S3 requests retention data transfer",
+      "expected_document_ids": ["demo-cost-awareness"],
+      "expected_chunk_ids": [],
+      "category": "cost_awareness",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Uses the guide's measurable cost inputs."
+    },
+    {
+      "query_id": "cost-exact-controls",
+      "query": "columnar compression partition pruning file compaction budgets cost allocation tags",
+      "expected_document_ids": ["demo-cost-awareness"],
+      "expected_chunk_ids": [],
+      "category": "cost_awareness",
+      "difficulty": "easy",
+      "match_type": "exact_keyword",
+      "notes": "Uses exact optimization controls."
+    },
+    {
+      "query_id": "cost-paraphrase-safe-savings",
+      "query": "Reduce spending without weakening recovery or reliability",
+      "expected_document_ids": ["demo-cost-awareness"],
+      "expected_chunk_ids": [],
+      "category": "cost_awareness",
+      "difficulty": "hard",
+      "match_type": "paraphrase",
+      "notes": "Rephrases the optimization safety constraint."
+    },
+    {
+      "query_id": "cost-ambiguous-small-files",
+      "query": "Are many small files increasing the bill?",
+      "expected_document_ids": ["demo-cost-awareness"],
+      "expected_chunk_ids": [],
+      "category": "cost_awareness",
+      "difficulty": "medium",
+      "match_type": "ambiguous",
+      "notes": "Overlaps Athena performance and general cost concerns."
+    },
+    {
+      "query_id": "cost-paraphrase-estimate",
+      "query": "A regional design estimate should not be presented as the final invoice",
+      "expected_document_ids": ["demo-cost-awareness"],
+      "expected_chunk_ids": [],
+      "category": "cost_awareness",
+      "difficulty": "medium",
+      "match_type": "paraphrase",
+      "notes": "Paraphrases the pricing and billing disclaimer."
+    }
+  ]
+}

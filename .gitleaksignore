@@ -1,0 +1,4 @@
+# Historical false positive: an AWS-shaped value was intentionally used to
+# prove that monitoring metadata rejects credential-like input. The working
+# fixture now constructs the value at runtime so future scans remain clean.
+2b5dd244e3fc683d94006fd3a6998e4c68a468c3:tests/unit/test_monitoring_analysis.py:aws-access-token:189

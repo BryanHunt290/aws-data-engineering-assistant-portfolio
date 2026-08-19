@@ -1,0 +1,10 @@
+intent,request_count,application_error_rate,feedback_count,positive_feedback_rate
+architecture_design,10,0.1,0,0.0
+deployment_request,9,0.0,9,0.777778
+destructive_action_request,9,0.0,5,0.8
+iam_review,9,0.0,0,0.0
+knowledge_question,9,0.111111,9,0.666667
+monitoring_request,9,0.0,0,0.0
+pipeline_troubleshooting,10,0.1,0,0.0
+pyspark_generation,9,0.0,9,0.777778
+sql_generation,10,0.1,10,0.7

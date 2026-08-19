@@ -1,0 +1,764 @@
+{
+  "answers": {
+    "metrics": {
+      "baseline-concise": {
+        "answer_completeness_rate": 0.333333,
+        "approval_gate_compliance_rate": 1.0,
+        "average_context_tokens": 1132.666667,
+        "average_input_tokens": 1250.111111,
+        "average_latency_ms": 0.179336,
+        "average_output_tokens": 30.75,
+        "average_prompt_tokens": 117.444444,
+        "average_simulated_cost_usd": "0.0003509652777777777777777777778",
+        "average_total_tokens": 1280.861111,
+        "by_category": {
+          "cost_optimization": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.18005,
+            "average_output_tokens": 35.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "data_quality": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.17655,
+            "average_output_tokens": 36.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "operational_procedure": {
+            "answer_completeness_rate": 0.0,
+            "average_latency_ms": 0.173908,
+            "average_output_tokens": 14.0,
+            "case_mode_count": 12,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.916667,
+            "safety_compliance_rate": 1.0
+          },
+          "reliability": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.17495,
+            "average_output_tokens": 44.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "schema_evolution": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.17395,
+            "average_output_tokens": 44.5,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "security": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.1794,
+            "average_output_tokens": 40.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "troubleshooting": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.188008,
+            "average_output_tokens": 37.583333,
+            "case_mode_count": 12,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "vector_operations": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.17165,
+            "average_output_tokens": 44.5,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_difficulty": {
+          "advanced": {
+            "answer_completeness_rate": 0.357143,
+            "average_latency_ms": 0.1788,
+            "average_output_tokens": 32.178571,
+            "case_mode_count": 28,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.946429,
+            "safety_compliance_rate": 1.0
+          },
+          "intermediate": {
+            "answer_completeness_rate": 0.25,
+            "average_latency_ms": 0.181212,
+            "average_output_tokens": 25.75,
+            "case_mode_count": 8,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.9375,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_mode": {
+          "concise": {
+            "answer_completeness_rate": 0.0,
+            "average_latency_ms": 0.17585,
+            "average_output_tokens": 17.166667,
+            "case_mode_count": 18,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.916667,
+            "safety_compliance_rate": 1.0
+          },
+          "detailed": {
+            "answer_completeness_rate": 0.666667,
+            "average_latency_ms": 0.182822,
+            "average_output_tokens": 44.333333,
+            "case_mode_count": 18,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.972222,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_safety": {
+          "ordinary": {
+            "answer_completeness_rate": 0.3125,
+            "average_latency_ms": 0.179813,
+            "average_output_tokens": 29.3125,
+            "case_mode_count": 32,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.942708,
+            "safety_compliance_rate": 1.0
+          },
+          "safety_sensitive": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.175525,
+            "average_output_tokens": 42.25,
+            "case_mode_count": 4,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "case_mode_count": 36,
+        "complete_citation_rate": 1.0,
+        "correct_citation_rate": 1.0,
+        "format_compliance_rate": 1.0,
+        "grounded_answer_rate": 1.0,
+        "overall_quality_score": 0.944444,
+        "p50_latency_ms": 0.1733,
+        "p95_latency_ms": 0.2219,
+        "required_uncertainty_rate": 1.0,
+        "safety_compliance_rate": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "grounded-evidence-first": {
+        "answer_completeness_rate": 1.0,
+        "approval_gate_compliance_rate": 1.0,
+        "average_context_tokens": 1132.666667,
+        "average_input_tokens": 1272.944444,
+        "average_latency_ms": 0.180078,
+        "average_output_tokens": 57.0,
+        "average_prompt_tokens": 140.277778,
+        "average_simulated_cost_usd": "0.0003894861111111111111111111111",
+        "average_total_tokens": 1329.944444,
+        "by_category": {
+          "cost_optimization": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.1908,
+            "average_output_tokens": 54.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 1.0,
+            "safety_compliance_rate": 1.0
+          },
+          "data_quality": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.1734,
+            "average_output_tokens": 55.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 1.0,
+            "safety_compliance_rate": 1.0
+          },
+          "operational_procedure": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.179717,
+            "average_output_tokens": 52.0,
+            "case_mode_count": 12,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 1.0,
+            "safety_compliance_rate": 1.0
+          },
+          "reliability": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.1748,
+            "average_output_tokens": 64.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "schema_evolution": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.17535,
+            "average_output_tokens": 66.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "security": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.18865,
+            "average_output_tokens": 58.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 1.0,
+            "safety_compliance_rate": 1.0
+          },
+          "troubleshooting": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.180392,
+            "average_output_tokens": 59.166667,
+            "case_mode_count": 12,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.993056,
+            "safety_compliance_rate": 1.0
+          },
+          "vector_operations": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.17775,
+            "average_output_tokens": 62.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_difficulty": {
+          "advanced": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.177882,
+            "average_output_tokens": 58.214286,
+            "case_mode_count": 28,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.988095,
+            "safety_compliance_rate": 1.0
+          },
+          "intermediate": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.187762,
+            "average_output_tokens": 52.75,
+            "case_mode_count": 8,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 1.0,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_mode": {
+          "concise": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.179733,
+            "average_output_tokens": 51.0,
+            "case_mode_count": 18,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.981481,
+            "safety_compliance_rate": 1.0
+          },
+          "detailed": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.180422,
+            "average_output_tokens": 63.0,
+            "case_mode_count": 18,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 1.0,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_safety": {
+          "ordinary": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.179687,
+            "average_output_tokens": 56.625,
+            "case_mode_count": 32,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.992188,
+            "safety_compliance_rate": 1.0
+          },
+          "safety_sensitive": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.1832,
+            "average_output_tokens": 60.0,
+            "case_mode_count": 4,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.979167,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "case_mode_count": 36,
+        "complete_citation_rate": 1.0,
+        "correct_citation_rate": 1.0,
+        "format_compliance_rate": 1.0,
+        "grounded_answer_rate": 1.0,
+        "overall_quality_score": 0.990741,
+        "p50_latency_ms": 0.1776,
+        "p95_latency_ms": 0.1938,
+        "required_uncertainty_rate": 1.0,
+        "safety_compliance_rate": 1.0,
+        "unsupported_claim_rate": 0.0
+      },
+      "structured-troubleshooting": {
+        "answer_completeness_rate": 0.833333,
+        "approval_gate_compliance_rate": 1.0,
+        "average_context_tokens": 1132.666667,
+        "average_input_tokens": 1269.944444,
+        "average_latency_ms": 0.184811,
+        "average_output_tokens": 60.222222,
+        "average_prompt_tokens": 137.277778,
+        "average_simulated_cost_usd": "0.0003927638888888888888888888889",
+        "average_total_tokens": 1330.166667,
+        "by_category": {
+          "cost_optimization": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.1837,
+            "average_output_tokens": 61.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 1.0,
+            "safety_compliance_rate": 1.0
+          },
+          "data_quality": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.17775,
+            "average_output_tokens": 62.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "operational_procedure": {
+            "answer_completeness_rate": 0.5,
+            "average_latency_ms": 0.177508,
+            "average_output_tokens": 46.0,
+            "case_mode_count": 12,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "reliability": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.1756,
+            "average_output_tokens": 71.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "schema_evolution": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.2458,
+            "average_output_tokens": 73.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "security": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.19255,
+            "average_output_tokens": 70.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          },
+          "troubleshooting": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.184608,
+            "average_output_tokens": 66.166667,
+            "case_mode_count": 12,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.965278,
+            "safety_compliance_rate": 1.0
+          },
+          "vector_operations": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.1785,
+            "average_output_tokens": 74.0,
+            "case_mode_count": 2,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_difficulty": {
+          "advanced": {
+            "answer_completeness_rate": 0.857143,
+            "average_latency_ms": 0.1846,
+            "average_output_tokens": 61.678571,
+            "case_mode_count": 28,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.96131,
+            "safety_compliance_rate": 1.0
+          },
+          "intermediate": {
+            "answer_completeness_rate": 0.75,
+            "average_latency_ms": 0.18555,
+            "average_output_tokens": 55.125,
+            "case_mode_count": 8,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.96875,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_mode": {
+          "concise": {
+            "answer_completeness_rate": 0.666667,
+            "average_latency_ms": 0.183378,
+            "average_output_tokens": 49.888889,
+            "case_mode_count": 18,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.925926,
+            "safety_compliance_rate": 1.0
+          },
+          "detailed": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.186244,
+            "average_output_tokens": 70.555556,
+            "case_mode_count": 18,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 1.0,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "by_safety": {
+          "ordinary": {
+            "answer_completeness_rate": 0.8125,
+            "average_latency_ms": 0.184722,
+            "average_output_tokens": 58.75,
+            "case_mode_count": 32,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.963542,
+            "safety_compliance_rate": 1.0
+          },
+          "safety_sensitive": {
+            "answer_completeness_rate": 1.0,
+            "average_latency_ms": 0.185525,
+            "average_output_tokens": 72.0,
+            "case_mode_count": 4,
+            "grounded_answer_rate": 1.0,
+            "overall_quality_score": 0.958333,
+            "safety_compliance_rate": 1.0
+          }
+        },
+        "case_mode_count": 36,
+        "complete_citation_rate": 1.0,
+        "correct_citation_rate": 1.0,
+        "format_compliance_rate": 1.0,
+        "grounded_answer_rate": 1.0,
+        "overall_quality_score": 0.962963,
+        "p50_latency_ms": 0.178,
+        "p95_latency_ms": 0.2382,
+        "required_uncertainty_rate": 1.0,
+        "safety_compliance_rate": 1.0,
+        "unsupported_claim_rate": 0.0
+      }
+    },
+    "recommended_prompt_strategy": "grounded-evidence-first"
+  },
+  "dataset": {
+    "answer_case_count": 18,
+    "answerable_retrieval_query_count": 30,
+    "document_count": 6,
+    "license": "CC-BY-4.0",
+    "name": "AWS Data Pipeline Operations Knowledge Base",
+    "retrieval_query_count": 36,
+    "split": "test",
+    "unanswerable_retrieval_query_count": 6,
+    "version": "1.0.0"
+  },
+  "limitations": [
+    "Unanswerable retrieval cases are preserved and counted but are not included in precision, recall, or MRR calculations.",
+    "Answer evaluation uses a deterministic fake provider to measure prompt-contract adherence, not real language-model quality.",
+    "All documents and cases are synthetic; no provider call or deployment occurs."
+  ],
+  "retrieval": {
+    "metrics": {
+      "hybrid": {
+        "average_latency_ms": 16.317233,
+        "by_category": {
+          "cost_optimization": {
+            "case_count": 5,
+            "hit_rate": 0.8,
+            "mrr": 0.416667,
+            "recall_at_5": 0.8
+          },
+          "data_quality": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 0.8,
+            "recall_at_5": 1.0
+          },
+          "reliability": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 0.8,
+            "recall_at_5": 1.0
+          },
+          "schema_evolution": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 0.85,
+            "recall_at_5": 1.0
+          },
+          "security": {
+            "case_count": 5,
+            "hit_rate": 0.8,
+            "mrr": 0.65,
+            "recall_at_5": 0.8
+          },
+          "vector_operations": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 0.866667,
+            "recall_at_5": 1.0
+          }
+        },
+        "by_difficulty": {
+          "advanced": {
+            "case_count": 20,
+            "hit_rate": 1.0,
+            "mrr": 0.829167,
+            "recall_at_5": 1.0
+          },
+          "intermediate": {
+            "case_count": 10,
+            "hit_rate": 0.8,
+            "mrr": 0.533333,
+            "recall_at_5": 0.8
+          }
+        },
+        "by_match_type": {
+          "ambiguous": {
+            "case_count": 18,
+            "hit_rate": 0.944444,
+            "mrr": 0.777778,
+            "recall_at_5": 0.944444
+          },
+          "exact_keyword": {
+            "case_count": 6,
+            "hit_rate": 0.833333,
+            "mrr": 0.75,
+            "recall_at_5": 0.833333
+          },
+          "paraphrase": {
+            "case_count": 6,
+            "hit_rate": 1.0,
+            "mrr": 0.569444,
+            "recall_at_5": 1.0
+          }
+        },
+        "case_count": 30,
+        "exact_document_success": 0.933333,
+        "hit_rate": 0.933333,
+        "mrr": 0.730556,
+        "no_result_rate": 0.0,
+        "p50_latency_ms": 16.33895,
+        "p95_latency_ms": 17.2636,
+        "precision_at_1": 0.6,
+        "precision_at_3": 0.4,
+        "precision_at_5": 0.333333,
+        "recall_at_1": 0.6,
+        "recall_at_3": 0.833333,
+        "recall_at_5": 0.933333,
+        "selection_score": 0.811944
+      },
+      "keyword": {
+        "average_latency_ms": 11.811837,
+        "by_category": {
+          "cost_optimization": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          },
+          "data_quality": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          },
+          "reliability": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          },
+          "schema_evolution": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          },
+          "security": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          },
+          "vector_operations": {
+            "case_count": 5,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          }
+        },
+        "by_difficulty": {
+          "advanced": {
+            "case_count": 20,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          },
+          "intermediate": {
+            "case_count": 10,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          }
+        },
+        "by_match_type": {
+          "ambiguous": {
+            "case_count": 18,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          },
+          "exact_keyword": {
+            "case_count": 6,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          },
+          "paraphrase": {
+            "case_count": 6,
+            "hit_rate": 1.0,
+            "mrr": 1.0,
+            "recall_at_5": 1.0
+          }
+        },
+        "case_count": 30,
+        "exact_document_success": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "no_result_rate": 0.0,
+        "p50_latency_ms": 11.84955,
+        "p95_latency_ms": 12.9933,
+        "precision_at_1": 1.0,
+        "precision_at_3": 0.7,
+        "precision_at_5": 0.6,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "selection_score": 1.0
+      },
+      "semantic": {
+        "average_latency_ms": 2.27953,
+        "by_category": {
+          "cost_optimization": {
+            "case_count": 5,
+            "hit_rate": 0.4,
+            "mrr": 0.15,
+            "recall_at_5": 0.4
+          },
+          "data_quality": {
+            "case_count": 5,
+            "hit_rate": 0.6,
+            "mrr": 0.366667,
+            "recall_at_5": 0.6
+          },
+          "reliability": {
+            "case_count": 5,
+            "hit_rate": 0.4,
+            "mrr": 0.14,
+            "recall_at_5": 0.4
+          },
+          "schema_evolution": {
+            "case_count": 5,
+            "hit_rate": 0.8,
+            "mrr": 0.566667,
+            "recall_at_5": 0.8
+          },
+          "security": {
+            "case_count": 5,
+            "hit_rate": 0.2,
+            "mrr": 0.2,
+            "recall_at_5": 0.2
+          },
+          "vector_operations": {
+            "case_count": 5,
+            "hit_rate": 0.6,
+            "mrr": 0.6,
+            "recall_at_5": 0.6
+          }
+        },
+        "by_difficulty": {
+          "advanced": {
+            "case_count": 20,
+            "hit_rate": 0.6,
+            "mrr": 0.418333,
+            "recall_at_5": 0.6
+          },
+          "intermediate": {
+            "case_count": 10,
+            "hit_rate": 0.3,
+            "mrr": 0.175,
+            "recall_at_5": 0.3
+          }
+        },
+        "by_match_type": {
+          "ambiguous": {
+            "case_count": 18,
+            "hit_rate": 0.5,
+            "mrr": 0.335185,
+            "recall_at_5": 0.5
+          },
+          "exact_keyword": {
+            "case_count": 6,
+            "hit_rate": 0.666667,
+            "mrr": 0.430556,
+            "recall_at_5": 0.666667
+          },
+          "paraphrase": {
+            "case_count": 6,
+            "hit_rate": 0.333333,
+            "mrr": 0.25,
+            "recall_at_5": 0.333333
+          }
+        },
+        "case_count": 30,
+        "exact_document_success": 0.5,
+        "hit_rate": 0.5,
+        "mrr": 0.337222,
+        "no_result_rate": 0.0,
+        "p50_latency_ms": 2.285,
+        "p95_latency_ms": 2.3686,
+        "precision_at_1": 0.233333,
+        "precision_at_3": 0.166667,
+        "precision_at_5": 0.113333,
+        "recall_at_1": 0.233333,
+        "recall_at_3": 0.433333,
+        "recall_at_5": 0.5,
+        "selection_score": 0.405278
+      }
+    },
+    "recommended_strategy": "keyword"
+  },
+  "schema_version": 1
+}

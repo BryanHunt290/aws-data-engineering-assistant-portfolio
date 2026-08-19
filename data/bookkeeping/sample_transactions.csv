@@ -1,0 +1,13 @@
+Date,Description,Amount,Transaction ID,Account,Category,Memo,Vendor
+2026-01-03,Synthetic client invoice,4500.00,SYN-1001,Business Checking 1000,Income,January project,Synthetic Client A
+2026-01-05,Synthetic office rent,-1200.00,SYN-1002,Business Checking 1000,Rent,January rent,Synthetic Property LLC
+2026-01-08,Synthetic design software,-49.00,SYN-1003,Business Card 2000,Software,Monthly plan,Synthetic Software Co
+2026-01-10,Synthetic office supplies,-86.42,SYN-1004,Business Card 2000,Office Supplies,Printer supplies,Synthetic Office Shop
+2026-01-12,Synthetic internet service,-110.00,SYN-1005,Business Checking 1000,Utilities,Monthly service,Synthetic ISP
+2026-01-15,Synthetic consulting payment,2200.00,SYN-1006,Business Checking 1000,Income,Advisory work,Synthetic Client B
+2026-01-18,Synthetic contractor invoice,-750.00,SYN-1007,Business Checking 1000,Contractor Expense,Project support,Synthetic Contractor
+2026-01-20,Synthetic travel hotel,-325.50,SYN-1008,Business Card 2000,,Conference lodging,Synthetic Hotel
+2026-01-21,Synthetic travel hotel,-325.50,SYN-1009,Business Card 2000,,Possible duplicate for review,Synthetic Hotel
+2026-02-02,Synthetic client invoice,3000.00,SYN-1010,Business Checking 1000,Income,February project,Synthetic Client C
+2026-02-04,Synthetic bank service fee,-15.00,SYN-1011,Business Checking 1000,,Monthly account fee,Synthetic Bank
+2026-02-07,Synthetic team meal,-74.25,SYN-1012,Business Card 2000,Meals,Project review,Synthetic Cafe

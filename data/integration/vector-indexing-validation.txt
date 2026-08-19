@@ -1,0 +1,44 @@
+Repository-authored synthetic integration fixture
+License: MIT, consistent with the repository LICENSE file.
+
+This document describes an imaginary data pipeline used only for validation.
+It contains no customer, personal, confidential, or production information.
+The first checkpoint is called cobalt heron checkpoint. A validation query for
+that exact phrase should locate this source after indexing. The checkpoint
+confirms that a fictional batch copied synthetic weather station readings from
+an input prefix to an imaginary curated prefix. No real bucket name, account,
+operator, or external system is represented.
+
+The fictional transformation assigns a quality label to each row. Its unusual
+rule is named amber lattice retry. That phrase exists solely to make retrieval
+verification deterministic. Rows with a missing synthetic temperature remain
+in a review state; rows with finite values advance. The document does not
+contain commands that alter infrastructure, and the validation process must
+never treat this narrative as an authorization to deploy anything.
+
+The imaginary observability stage emits identifier-and-count-only events. It
+records a client scope, environment scope, namespace, domain, document ID,
+status, duration, indexed count, pending count, and failed count. It never emits
+document text, embedding vectors, provider request bodies, passwords, API keys,
+or secret payloads. A retryable failure leaves the affected chunk pending so a
+later invocation can continue without repeating completed chunks.
+
+The final verification marker is quartz compass namespace. A query containing
+that exact phrase should return only points whose payload matches the expected
+internal development client, environment, integration namespace, and
+integration domain. A point from a different scope is a validation failure even
+if its similarity score is high. Collection inspection must use summaries and
+counts rather than printing vector values or stored text.
+
+For failure-path validation, an operator may later arrange one bounded,
+non-production retryable outage after explicit approval. The expected behavior
+is partial or failed descriptor state with preserved indexed chunks, followed
+by successful continuation when the dependency is restored. Permanent schema,
+scope, dimension, and collection-contract failures must not be reset or
+redriven automatically. Cleanup is always a separately approved plan.
+
+This concluding paragraph pads the fixture to a stable multi-chunk size while
+remaining synthetic. The fictional run identifier is northwind-kite-47, the
+fictional schema label is riverstone-v2, and the fictional completion signal is
+silver orchard ready. These phrases may support later retrieval checks. They
+do not identify a person, company, account, workload, or deployed resource.

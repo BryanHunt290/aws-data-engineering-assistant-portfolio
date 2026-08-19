@@ -1,0 +1,829 @@
+strategy_id,strategy_version,fake_llm_mode,case_id,category,difficulty,safety_sensitive,context_checksum,required_source_ids,cited_source_ids,groundedness,citation_correctness,citation_completeness,answer_relevance,instruction_following,uncertainty_handling,safety_compliance,approval_gate_compliance,forbidden_claim_avoidance,response_completeness,response_conciseness,structural_correctness,prompt_tokens,context_tokens,input_tokens,output_tokens,total_tokens,simulated_estimated_cost_usd,charge_incurred,latency_ms,response
+baseline-concise,baseline-concise-v1,concise,ae-apo-008-athena-query-cost-guardrails-control,cost_optimization,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,117,1122,1239,20,1259,0.00033475,False,0.1817,"Answer:
+Use isolated workgroups with enforced result locations, per-query scan cutoffs, tagged ownership, and alarms on aggregate bytes scanned. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-008-athena-query-cost-guardrails-control,cost_optimization,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,117,1122,1239,50,1289,0.00037225,False,0.1784,"Answer:
+Use isolated workgroups with enforced result locations, per-query scan cutoffs, tagged ownership, and alarms on aggregate bytes scanned.; a workgroup-enforced maximum amount of data one query may read before Athena terminates it as a cost-control action [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-008-athena-query-cost-guardrails-control,cost_optimization,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,138,1122,1260,48,1308,0.00037500,False,0.1896,"Answer:
+Use isolated workgroups with enforced result locations, per-query scan cutoffs, tagged ownership, and alarms on aggregate bytes scanned.; a workgroup-enforced maximum amount of data one query may read before Athena terminates it as a cost-control action [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-008-athena-query-cost-guardrails-control,cost_optimization,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,138,1122,1260,60,1320,0.0003900,False,0.192,"Answer:
+Use isolated workgroups with enforced result locations, per-query scan cutoffs, tagged ownership, and alarms on aggregate bytes scanned.; a workgroup-enforced maximum amount of data one query may read before Athena terminates it as a cost-control action [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-008-athena-query-cost-guardrails-control,cost_optimization,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,135,1122,1257,55,1312,0.00038300,False,0.1917,"Assessment:
+Use isolated workgroups with enforced result locations, per-query scan cutoffs, tagged ownership, and alarms on aggregate bytes scanned.; a workgroup-enforced maximum amount of data one query may read before Athena terminates it as a cost-control action [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-008-athena-query-cost-guardrails-control,cost_optimization,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,135,1122,1257,67,1324,0.00039800,False,0.1757,"Assessment:
+Use isolated workgroups with enforced result locations, per-query scan cutoffs, tagged ownership, and alarms on aggregate bytes scanned.; a workgroup-enforced maximum amount of data one query may read before Athena terminates it as a cost-control action [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-008-athena-query-cost-guardrails-failure,troubleshooting,advanced,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,126,1122,1248,23,1271,0.00034075,False,0.1765,"Answer:
+The query filters on a derived expression that prevents partition pruning and reads wide text files instead of selected columnar fields. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-008-athena-query-cost-guardrails-failure,troubleshooting,advanced,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,126,1122,1248,56,1304,0.00038200,False,0.2933,"Answer:
+The query filters on a derived expression that prevents partition pruning and reads wide text files instead of selected columnar fields.; Inspect EXPLAIN output, add direct partition predicates, select required columns, compact or convert source files when justified, and remeasure scanned bytes. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-008-athena-query-cost-guardrails-failure,troubleshooting,advanced,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,147,1122,1269,54,1323,0.00038475,False,0.1938,"Answer:
+The query filters on a derived expression that prevents partition pruning and reads wide text files instead of selected columnar fields.; Inspect EXPLAIN output, add direct partition predicates, select required columns, compact or convert source files when justified, and remeasure scanned bytes. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-008-athena-query-cost-guardrails-failure,troubleshooting,advanced,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,147,1122,1269,66,1335,0.00039975,False,0.1785,"Answer:
+The query filters on a derived expression that prevents partition pruning and reads wide text files instead of selected columnar fields.; Inspect EXPLAIN output, add direct partition predicates, select required columns, compact or convert source files when justified, and remeasure scanned bytes. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-008-athena-query-cost-guardrails-failure,troubleshooting,advanced,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,144,1122,1266,61,1327,0.00039275,False,0.1831,"Assessment:
+The query filters on a derived expression that prevents partition pruning and reads wide text files instead of selected columnar fields.; Inspect EXPLAIN output, add direct partition predicates, select required columns, compact or convert source files when justified, and remeasure scanned bytes. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-008-athena-query-cost-guardrails-failure,troubleshooting,advanced,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,144,1122,1266,73,1339,0.00040775,False,0.186,"Assessment:
+The query filters on a derived expression that prevents partition pruning and reads wide text files instead of selected columnar fields.; Inspect EXPLAIN output, add direct partition predicates, select required columns, compact or convert source files when justified, and remeasure scanned bytes. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-008-athena-query-cost-guardrails-procedure,operational_procedure,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,118,1122,1240,6,1246,0.00031750,False,0.1732,"Answer:
+Freeze the affected scope. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-008-athena-query-cost-guardrails-procedure,operational_procedure,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,118,1122,1240,22,1262,0.00033750,False,0.1775,"Answer:
+Freeze the affected scope.; Capture a safe baseline. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-008-athena-query-cost-guardrails-procedure,operational_procedure,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,139,1122,1261,44,1305,0.00037025,False,0.1828,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Review workgroup configuration, result-prefix isolation, query history, bytes scanned, cutoff failures, and cost allocation tags for the same period. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-008-athena-query-cost-guardrails-procedure,operational_procedure,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,139,1122,1261,56,1317,0.00038525,False,0.1849,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Review workgroup configuration, result-prefix isolation, query history, bytes scanned, cutoff failures, and cost allocation tags for the same period. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-008-athena-query-cost-guardrails-procedure,operational_procedure,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,136,1122,1258,27,1285,0.00034825,False,0.2025,"Assessment:
+Freeze the affected scope.; Capture a safe baseline. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-008-athena-query-cost-guardrails-procedure,operational_procedure,intermediate,False,sha256:8a1b47c50ec23a3c9f08a910a2ffa75d89699c784482a55bdf26d0a5fd1ec456,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1122,1258,63,1321,0.00039325,False,0.1886,"Assessment:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Review workgroup configuration, result-prefix isolation, query history, bytes scanned, cutoff failures, and cost allocation tags for the same period. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-009-athena-result-location-security-control,security,intermediate,True,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,113,1114,1227,26,1253,0.00033925,False,0.1778,"Answer:
+Enforce the result location through the workgroup, deny caller overrides, encrypt results, and scope both S3 object and listing permissions to the result namespace. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-009-athena-result-location-security-control,security,intermediate,True,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,113,1114,1227,54,1281,0.00037425,False,0.181,"Answer:
+Enforce the result location through the workgroup, deny caller overrides, encrypt results, and scope both S3 object and listing permissions to the result namespace.; a workgroup setting that makes centrally reviewed output and encryption controls authoritative over caller-supplied query options [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-009-athena-result-location-security-control,security,intermediate,True,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1114,1250,52,1302,0.00037750,False,0.1844,"Answer:
+Enforce the result location through the workgroup, deny caller overrides, encrypt results, and scope both S3 object and listing permissions to the result namespace.; a workgroup setting that makes centrally reviewed output and encryption controls authoritative over caller-supplied query options [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-009-athena-result-location-security-control,security,intermediate,True,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1114,1250,64,1314,0.00039250,False,0.1929,"Answer:
+Enforce the result location through the workgroup, deny caller overrides, encrypt results, and scope both S3 object and listing permissions to the result namespace.; a workgroup setting that makes centrally reviewed output and encryption controls authoritative over caller-supplied query options [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-009-athena-result-location-security-control,security,intermediate,True,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,133,1114,1247,64,1311,0.00039175,False,0.2064,"Assessment:
+Enforce the result location through the workgroup, deny caller overrides, encrypt results, and scope both S3 object and listing permissions to the result namespace.; a workgroup setting that makes centrally reviewed output and encryption controls authoritative over caller-supplied query options [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+No action was executed; preserve approval and safety controls."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-009-athena-result-location-security-control,security,intermediate,True,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,133,1114,1247,76,1323,0.00040675,False,0.1787,"Assessment:
+Enforce the result location through the workgroup, deny caller overrides, encrypt results, and scope both S3 object and listing permissions to the result namespace.; a workgroup setting that makes centrally reviewed output and encryption controls authoritative over caller-supplied query options [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+No action was executed; preserve approval and safety controls."
+baseline-concise,baseline-concise-v1,concise,ae-apo-009-athena-result-location-security-failure,troubleshooting,advanced,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,125,1114,1239,19,1258,0.00033350,False,0.1689,"Answer:
+The workgroup does not enforce its configured settings, allowing the API request to override the output location. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-009-athena-result-location-security-failure,troubleshooting,advanced,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,125,1114,1239,51,1290,0.00037350,False,0.1733,"Answer:
+The workgroup does not enforce its configured settings, allowing the API request to override the output location.; Enable workgroup enforcement, remove broader result-bucket grants, expire misplaced temporary results according to policy, and test a denied override request. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-009-athena-result-location-security-failure,troubleshooting,advanced,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,148,1114,1262,49,1311,0.00037675,False,0.1751,"Answer:
+The workgroup does not enforce its configured settings, allowing the API request to override the output location.; Enable workgroup enforcement, remove broader result-bucket grants, expire misplaced temporary results according to policy, and test a denied override request. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-009-athena-result-location-security-failure,troubleshooting,advanced,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,148,1114,1262,61,1323,0.00039175,False,0.1766,"Answer:
+The workgroup does not enforce its configured settings, allowing the API request to override the output location.; Enable workgroup enforcement, remove broader result-bucket grants, expire misplaced temporary results according to policy, and test a denied override request. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-009-athena-result-location-security-failure,troubleshooting,advanced,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,145,1114,1259,56,1315,0.00038475,False,0.1771,"Assessment:
+The workgroup does not enforce its configured settings, allowing the API request to override the output location.; Enable workgroup enforcement, remove broader result-bucket grants, expire misplaced temporary results according to policy, and test a denied override request. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-009-athena-result-location-security-failure,troubleshooting,advanced,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,145,1114,1259,68,1327,0.00039975,False,0.1773,"Assessment:
+The workgroup does not enforce its configured settings, allowing the API request to override the output location.; Enable workgroup enforcement, remove broader result-bucket grants, expire misplaced temporary results according to policy, and test a denied override request. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-009-athena-result-location-security-procedure,operational_procedure,intermediate,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,114,1114,1228,6,1234,0.00031450,False,0.1672,"Answer:
+Freeze the affected scope. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-009-athena-result-location-security-procedure,operational_procedure,intermediate,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,114,1114,1228,22,1250,0.00033450,False,0.2129,"Answer:
+Freeze the affected scope.; Capture a safe baseline. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-009-athena-result-location-security-procedure,operational_procedure,intermediate,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,137,1114,1251,43,1294,0.00036650,False,0.2006,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Inspect workgroup enforcement, output ARN, encryption setting, bucket policy, object ownership, lifecycle retention, and negative cross-prefix access tests. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-009-athena-result-location-security-procedure,operational_procedure,intermediate,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,137,1114,1251,55,1306,0.00038150,False,0.1749,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Inspect workgroup enforcement, output ARN, encryption setting, bucket policy, object ownership, lifecycle retention, and negative cross-prefix access tests. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-009-athena-result-location-security-procedure,operational_procedure,intermediate,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,134,1114,1248,27,1275,0.00034575,False,0.1683,"Assessment:
+Freeze the affected scope.; Capture a safe baseline. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-009-athena-result-location-security-procedure,operational_procedure,intermediate,False,sha256:83d3f23d903621a24c8c4a22b7a4ce93b47eb1b6e27717c433f1bbdd7a14b6c9,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,134,1114,1248,62,1310,0.00038950,False,0.1725,"Assessment:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Inspect workgroup enforcement, output ARN, encryption setting, bucket policy, object ownership, lifecycle retention, and negative cross-prefix access tests. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-011-lambda-concurrency-backpressure-control,reliability,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,113,1139,1252,28,1280,0.00034800,False,0.1743,"Answer:
+Model arrival rate, duration, retry amplification, and downstream capacity before setting any reserved concurrency; omit it when a low account quota cannot preserve required unreserved capacity. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-control,reliability,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,113,1139,1252,60,1312,0.00038800,False,0.1756,"Answer:
+Model arrival rate, duration, retry amplification, and downstream capacity before setting any reserved concurrency; omit it when a low account quota cannot preserve required unreserved capacity.; a deliberate limit or delay that keeps incoming work within the safe processing rate of Lambda and its downstream dependencies [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-011-lambda-concurrency-backpressure-control,reliability,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,136,1139,1275,58,1333,0.00039125,False,0.1743,"Answer:
+Model arrival rate, duration, retry amplification, and downstream capacity before setting any reserved concurrency; omit it when a low account quota cannot preserve required unreserved capacity.; a deliberate limit or delay that keeps incoming work within the safe processing rate of Lambda and its downstream dependencies [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-control,reliability,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1139,1275,70,1345,0.00040625,False,0.1753,"Answer:
+Model arrival rate, duration, retry amplification, and downstream capacity before setting any reserved concurrency; omit it when a low account quota cannot preserve required unreserved capacity.; a deliberate limit or delay that keeps incoming work within the safe processing rate of Lambda and its downstream dependencies [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-011-lambda-concurrency-backpressure-control,reliability,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,133,1139,1272,65,1337,0.00039925,False,0.1757,"Assessment:
+Model arrival rate, duration, retry amplification, and downstream capacity before setting any reserved concurrency; omit it when a low account quota cannot preserve required unreserved capacity.; a deliberate limit or delay that keeps incoming work within the safe processing rate of Lambda and its downstream dependencies [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-control,reliability,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,133,1139,1272,77,1349,0.00041425,False,0.1755,"Assessment:
+Model arrival rate, duration, retry amplification, and downstream capacity before setting any reserved concurrency; omit it when a low account quota cannot preserve required unreserved capacity.; a deliberate limit or delay that keeps incoming work within the safe processing rate of Lambda and its downstream dependencies [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-011-lambda-concurrency-backpressure-failure,troubleshooting,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,131,1139,1270,17,1287,0.00033875,False,0.1691,"Answer:
+Environment-specific quota constraints were ignored and a production-style fixed concurrency value was synthesized for development. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-failure,troubleshooting,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,131,1139,1270,50,1320,0.0003800,False,0.1711,"Answer:
+Environment-specific quota constraints were ignored and a production-style fixed concurrency value was synthesized for development.; Remove the internal-dev reservation entirely, keep configurability for approved environments, synthesize both modes, and review the resulting Lambda property before deployment. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-011-lambda-concurrency-backpressure-failure,troubleshooting,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,154,1139,1293,48,1341,0.00038325,False,0.1756,"Answer:
+Environment-specific quota constraints were ignored and a production-style fixed concurrency value was synthesized for development.; Remove the internal-dev reservation entirely, keep configurability for approved environments, synthesize both modes, and review the resulting Lambda property before deployment. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-failure,troubleshooting,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,154,1139,1293,60,1353,0.00039825,False,0.189,"Answer:
+Environment-specific quota constraints were ignored and a production-style fixed concurrency value was synthesized for development.; Remove the internal-dev reservation entirely, keep configurability for approved environments, synthesize both modes, and review the resulting Lambda property before deployment. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-011-lambda-concurrency-backpressure-failure,troubleshooting,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,151,1139,1290,55,1345,0.00039125,False,0.1806,"Assessment:
+Environment-specific quota constraints were ignored and a production-style fixed concurrency value was synthesized for development.; Remove the internal-dev reservation entirely, keep configurability for approved environments, synthesize both modes, and review the resulting Lambda property before deployment. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-failure,troubleshooting,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,151,1139,1290,67,1357,0.00040625,False,0.1763,"Assessment:
+Environment-specific quota constraints were ignored and a production-style fixed concurrency value was synthesized for development.; Remove the internal-dev reservation entirely, keep configurability for approved environments, synthesize both modes, and review the resulting Lambda property before deployment. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-011-lambda-concurrency-backpressure-procedure,operational_procedure,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,114,1139,1253,6,1259,0.00032075,False,0.1673,"Answer:
+Freeze the affected scope. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-procedure,operational_procedure,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,114,1139,1253,22,1275,0.00034075,False,0.1684,"Answer:
+Freeze the affected scope.; Capture a safe baseline. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-011-lambda-concurrency-backpressure-procedure,operational_procedure,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,137,1139,1276,44,1320,0.00037400,False,0.1763,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Confirm ReservedConcurrentExecutions is absent, runtime safeguards remain unchanged, account concurrency metrics are stable, and DLQ age is not increasing. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-procedure,operational_procedure,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,137,1139,1276,56,1332,0.00038900,False,0.1762,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Confirm ReservedConcurrentExecutions is absent, runtime safeguards remain unchanged, account concurrency metrics are stable, and DLQ age is not increasing. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-011-lambda-concurrency-backpressure-procedure,operational_procedure,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,134,1139,1273,27,1300,0.00035200,False,0.1734,"Assessment:
+Freeze the affected scope.; Capture a safe baseline. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-011-lambda-concurrency-backpressure-procedure,operational_procedure,advanced,False,sha256:64e6a5a7b575490a59cfa53f5920894f338f04b7d752f37c83639dbeee48055b,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,134,1139,1273,63,1336,0.00039700,False,0.179,"Assessment:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Confirm ReservedConcurrentExecutions is absent, runtime safeguards remain unchanged, account concurrency metrics are stable, and DLQ age is not increasing. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-024-schema-registry-compatibility-control,schema_evolution,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,111,1137,1248,27,1275,0.00034575,False,0.1762,"Answer:
+Register schemas with stable names, test changes against the selected backward or forward contract, and deploy consumers before producers when the compatibility direction requires it. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-024-schema-registry-compatibility-control,schema_evolution,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,111,1137,1248,62,1310,0.00038950,False,0.1717,"Answer:
+Register schemas with stable names, test changes against the selected backward or forward contract, and deploy consumers before producers when the compatibility direction requires it.; the ability of the new schema and reader plan to process data produced under prior approved schema versions according to declared field rules [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-024-schema-registry-compatibility-control,schema_evolution,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,135,1137,1272,60,1332,0.00039300,False,0.1751,"Answer:
+Register schemas with stable names, test changes against the selected backward or forward contract, and deploy consumers before producers when the compatibility direction requires it.; the ability of the new schema and reader plan to process data produced under prior approved schema versions according to declared field rules [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-024-schema-registry-compatibility-control,schema_evolution,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,135,1137,1272,72,1344,0.00040800,False,0.1756,"Answer:
+Register schemas with stable names, test changes against the selected backward or forward contract, and deploy consumers before producers when the compatibility direction requires it.; the ability of the new schema and reader plan to process data produced under prior approved schema versions according to declared field rules [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-024-schema-registry-compatibility-control,schema_evolution,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,132,1137,1269,67,1336,0.00040100,False,0.1768,"Assessment:
+Register schemas with stable names, test changes against the selected backward or forward contract, and deploy consumers before producers when the compatibility direction requires it.; the ability of the new schema and reader plan to process data produced under prior approved schema versions according to declared field rules [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-024-schema-registry-compatibility-control,schema_evolution,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,132,1137,1269,79,1348,0.00041600,False,0.3148,"Assessment:
+Register schemas with stable names, test changes against the selected backward or forward contract, and deploy consumers before producers when the compatibility direction requires it.; the ability of the new schema and reader plan to process data produced under prior approved schema versions according to declared field rules [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-024-schema-registry-compatibility-failure,troubleshooting,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,123,1137,1260,19,1279,0.00033875,False,0.2219,"Answer:
+The proposed version violates the registry's compatibility mode and no staged consumer migration has removed the dependency. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-024-schema-registry-compatibility-failure,troubleshooting,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,123,1137,1260,57,1317,0.00038625,False,0.1779,"Answer:
+The proposed version violates the registry's compatibility mode and no staged consumer migration has removed the dependency.; Keep the existing producer version, inventory consumers, deploy a tolerant consumer contract, register a migration version, and only then remove the field under a reviewed policy. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-024-schema-registry-compatibility-failure,troubleshooting,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,147,1137,1284,55,1339,0.00038975,False,0.1759,"Answer:
+The proposed version violates the registry's compatibility mode and no staged consumer migration has removed the dependency.; Keep the existing producer version, inventory consumers, deploy a tolerant consumer contract, register a migration version, and only then remove the field under a reviewed policy. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-024-schema-registry-compatibility-failure,troubleshooting,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,147,1137,1284,67,1351,0.00040475,False,0.1794,"Answer:
+The proposed version violates the registry's compatibility mode and no staged consumer migration has removed the dependency.; Keep the existing producer version, inventory consumers, deploy a tolerant consumer contract, register a migration version, and only then remove the field under a reviewed policy. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-024-schema-registry-compatibility-failure,troubleshooting,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,144,1137,1281,62,1343,0.00039775,False,0.1757,"Assessment:
+The proposed version violates the registry's compatibility mode and no staged consumer migration has removed the dependency.; Keep the existing producer version, inventory consumers, deploy a tolerant consumer contract, register a migration version, and only then remove the field under a reviewed policy. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-024-schema-registry-compatibility-failure,troubleshooting,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,144,1137,1281,74,1355,0.00041275,False,0.1846,"Assessment:
+The proposed version violates the registry's compatibility mode and no staged consumer migration has removed the dependency.; Keep the existing producer version, inventory consumers, deploy a tolerant consumer contract, register a migration version, and only then remove the field under a reviewed policy. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-024-schema-registry-compatibility-procedure,operational_procedure,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,112,1137,1249,6,1255,0.00031975,False,0.1812,"Answer:
+Freeze the affected scope. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-024-schema-registry-compatibility-procedure,operational_procedure,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,112,1137,1249,22,1271,0.00033975,False,0.1692,"Answer:
+Freeze the affected scope.; Capture a safe baseline. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-024-schema-registry-compatibility-procedure,operational_procedure,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1137,1273,45,1318,0.00037450,False,0.172,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Record registry and schema names, compatibility mode, prior and proposed fingerprints, compatibility result, consumer inventory, deployment order, and rollback version. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-024-schema-registry-compatibility-procedure,operational_procedure,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1137,1273,57,1330,0.00038950,False,0.1766,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Record registry and schema names, compatibility mode, prior and proposed fingerprints, compatibility result, consumer inventory, deployment order, and rollback version. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-024-schema-registry-compatibility-procedure,operational_procedure,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,133,1137,1270,27,1297,0.00035125,False,0.1734,"Assessment:
+Freeze the affected scope.; Capture a safe baseline. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-024-schema-registry-compatibility-procedure,operational_procedure,advanced,False,sha256:d968a5a6a57c9a5649e33dd554f0f74f34c7c265ae83ac8856100dc9631f38fa,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,133,1137,1270,64,1334,0.00039750,False,0.1784,"Assessment:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Record registry and schema names, compatibility mode, prior and proposed fingerprints, compatibility result, consumer inventory, deployment order, and rollback version. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-033-embedding-validation-gate-control,data_quality,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,113,1134,1247,21,1268,0.00033800,False,0.1803,"Answer:
+Require every embedding to be a non-empty numeric finite vector of the configured dimension before constructing any vector-store request. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-033-embedding-validation-gate-control,data_quality,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,113,1134,1247,51,1298,0.00037550,False,0.1728,"Answer:
+Require every embedding to be a non-empty numeric finite vector of the configured dimension before constructing any vector-store request.; an embedding whose every element is a real numeric value other than NaN or positive or negative infinity [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-033-embedding-validation-gate-control,data_quality,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1134,1270,49,1319,0.00037875,False,0.1726,"Answer:
+Require every embedding to be a non-empty numeric finite vector of the configured dimension before constructing any vector-store request.; an embedding whose every element is a real numeric value other than NaN or positive or negative infinity [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-033-embedding-validation-gate-control,data_quality,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1134,1270,61,1331,0.00039375,False,0.1742,"Answer:
+Require every embedding to be a non-empty numeric finite vector of the configured dimension before constructing any vector-store request.; an embedding whose every element is a real numeric value other than NaN or positive or negative infinity [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-033-embedding-validation-gate-control,data_quality,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,133,1134,1267,56,1323,0.00038675,False,0.1766,"Assessment:
+Require every embedding to be a non-empty numeric finite vector of the configured dimension before constructing any vector-store request.; an embedding whose every element is a real numeric value other than NaN or positive or negative infinity [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-033-embedding-validation-gate-control,data_quality,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,133,1134,1267,68,1335,0.00040175,False,0.1789,"Assessment:
+Require every embedding to be a non-empty numeric finite vector of the configured dimension before constructing any vector-store request.; an embedding whose every element is a real numeric value other than NaN or positive or negative infinity [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-033-embedding-validation-gate-failure,troubleshooting,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,120,1134,1254,23,1277,0.00034225,False,0.1693,"Answer:
+The runtime passed provider output directly to the vector client without verifying dimension and finite numeric values against the reviewed configuration. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-033-embedding-validation-gate-failure,troubleshooting,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,120,1134,1254,61,1315,0.00038975,False,0.172,"Answer:
+The runtime passed provider output directly to the vector client without verifying dimension and finite numeric values against the reviewed configuration.; Disable writes for the affected model/configuration pair, validate persisted outputs, mark invalid chunks failed without exposing vector content, and restore only after offline contract tests pass. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-033-embedding-validation-gate-failure,troubleshooting,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,143,1134,1277,59,1336,0.00039300,False,0.1754,"Answer:
+The runtime passed provider output directly to the vector client without verifying dimension and finite numeric values against the reviewed configuration.; Disable writes for the affected model/configuration pair, validate persisted outputs, mark invalid chunks failed without exposing vector content, and restore only after offline contract tests pass. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-033-embedding-validation-gate-failure,troubleshooting,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,143,1134,1277,71,1348,0.00040800,False,0.1888,"Answer:
+The runtime passed provider output directly to the vector client without verifying dimension and finite numeric values against the reviewed configuration.; Disable writes for the affected model/configuration pair, validate persisted outputs, mark invalid chunks failed without exposing vector content, and restore only after offline contract tests pass. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-033-embedding-validation-gate-failure,troubleshooting,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,140,1134,1274,66,1340,0.00040100,False,0.179,"Assessment:
+The runtime passed provider output directly to the vector client without verifying dimension and finite numeric values against the reviewed configuration.; Disable writes for the affected model/configuration pair, validate persisted outputs, mark invalid chunks failed without exposing vector content, and restore only after offline contract tests pass. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-033-embedding-validation-gate-failure,troubleshooting,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,140,1134,1274,78,1352,0.00041600,False,0.1746,"Assessment:
+The runtime passed provider output directly to the vector client without verifying dimension and finite numeric values against the reviewed configuration.; Disable writes for the affected model/configuration pair, validate persisted outputs, mark invalid chunks failed without exposing vector content, and restore only after offline contract tests pass. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-033-embedding-validation-gate-procedure,operational_procedure,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,114,1134,1248,6,1254,0.00031950,False,0.1637,"Answer:
+Freeze the affected scope. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-033-embedding-validation-gate-procedure,operational_procedure,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,114,1134,1248,22,1270,0.00033950,False,0.1675,"Answer:
+Freeze the affected scope.; Capture a safe baseline. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-033-embedding-validation-gate-procedure,operational_procedure,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,137,1134,1271,49,1320,0.00037900,False,0.1747,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Test empty, boolean, string, NaN, infinity, wrong-dimension, and valid vectors; assert no vector call for failures and ready state only after confirmed valid writes. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-033-embedding-validation-gate-procedure,operational_procedure,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,137,1134,1271,61,1332,0.00039400,False,0.1781,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Test empty, boolean, string, NaN, infinity, wrong-dimension, and valid vectors; assert no vector call for failures and ready state only after confirmed valid writes. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-033-embedding-validation-gate-procedure,operational_procedure,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,134,1134,1268,27,1295,0.00035075,False,0.1707,"Assessment:
+Freeze the affected scope.; Capture a safe baseline. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-033-embedding-validation-gate-procedure,operational_procedure,advanced,False,sha256:6d1783d5e5b4fc0d51161302759414bd256467b6c05d90ecdcc06000cb6270ac,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,134,1134,1268,68,1336,0.00040200,False,0.1727,"Assessment:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Test empty, boolean, string, NaN, infinity, wrong-dimension, and valid vectors; assert no vector call for failures and ready state only after confirmed valid writes. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-034-qdrant-collection-safety-control,vector_operations,advanced,True,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,113,1150,1263,31,1294,0.00035450,False,0.17,"Answer:
+Validate HTTPS endpoint and collection configuration offline, load the API key lazily from its secret reference, verify collection dimension at runtime, and upsert deterministic IDs with complete isolation payloads. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-034-qdrant-collection-safety-control,vector_operations,advanced,True,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,113,1150,1263,58,1321,0.00038825,False,0.1733,"Answer:
+Validate HTTPS endpoint and collection configuration offline, load the API key lazily from its secret reference, verify collection dimension at runtime, and upsert deterministic IDs with complete isolation payloads.; the reviewed combination of collection identity, vector dimension, distance behavior, payload schema, and client/environment scope [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-034-qdrant-collection-safety-control,vector_operations,advanced,True,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,136,1150,1286,56,1342,0.00039150,False,0.1772,"Answer:
+Validate HTTPS endpoint and collection configuration offline, load the API key lazily from its secret reference, verify collection dimension at runtime, and upsert deterministic IDs with complete isolation payloads.; the reviewed combination of collection identity, vector dimension, distance behavior, payload schema, and client/environment scope [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-034-qdrant-collection-safety-control,vector_operations,advanced,True,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,136,1150,1286,68,1354,0.00040650,False,0.1783,"Answer:
+Validate HTTPS endpoint and collection configuration offline, load the API key lazily from its secret reference, verify collection dimension at runtime, and upsert deterministic IDs with complete isolation payloads.; the reviewed combination of collection identity, vector dimension, distance behavior, payload schema, and client/environment scope [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-034-qdrant-collection-safety-control,vector_operations,advanced,True,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,133,1150,1283,68,1351,0.00040575,False,0.1787,"Assessment:
+Validate HTTPS endpoint and collection configuration offline, load the API key lazily from its secret reference, verify collection dimension at runtime, and upsert deterministic IDs with complete isolation payloads.; the reviewed combination of collection identity, vector dimension, distance behavior, payload schema, and client/environment scope [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+No action was executed; preserve approval and safety controls."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-034-qdrant-collection-safety-control,vector_operations,advanced,True,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,133,1150,1283,80,1363,0.00042075,False,0.1783,"Assessment:
+Validate HTTPS endpoint and collection configuration offline, load the API key lazily from its secret reference, verify collection dimension at runtime, and upsert deterministic IDs with complete isolation payloads.; the reviewed combination of collection identity, vector dimension, distance behavior, payload schema, and client/environment scope [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+No action was executed; preserve approval and safety controls."
+baseline-concise,baseline-concise-v1,concise,ae-apo-034-qdrant-collection-safety-failure,troubleshooting,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,123,1150,1273,19,1292,0.00034200,False,0.1779,"Answer:
+The embedding model changed without a versioned collection migration and the deployment validation checked only endpoint syntax. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-034-qdrant-collection-safety-failure,troubleshooting,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,123,1150,1273,56,1329,0.00038825,False,0.1849,"Answer:
+The embedding model changed without a versioned collection migration and the deployment validation checked only endpoint syntax.; Perform no writes, mark the operation failed with a safe dimension error, review collection metadata without logging credentials, and plan a separately approved versioned migration. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-034-qdrant-collection-safety-failure,troubleshooting,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,146,1150,1296,54,1350,0.00039150,False,0.1786,"Answer:
+The embedding model changed without a versioned collection migration and the deployment validation checked only endpoint syntax.; Perform no writes, mark the operation failed with a safe dimension error, review collection metadata without logging credentials, and plan a separately approved versioned migration. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-034-qdrant-collection-safety-failure,troubleshooting,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,146,1150,1296,66,1362,0.00040650,False,0.178,"Answer:
+The embedding model changed without a versioned collection migration and the deployment validation checked only endpoint syntax.; Perform no writes, mark the operation failed with a safe dimension error, review collection metadata without logging credentials, and plan a separately approved versioned migration. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-034-qdrant-collection-safety-failure,troubleshooting,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,False,True,143,1150,1293,61,1354,0.00039950,False,0.2382,"Assessment:
+The embedding model changed without a versioned collection migration and the deployment validation checked only endpoint syntax.; Perform no writes, mark the operation failed with a safe dimension error, review collection metadata without logging credentials, and plan a separately approved versioned migration. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-034-qdrant-collection-safety-failure,troubleshooting,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,143,1150,1293,73,1366,0.00041450,False,0.1828,"Assessment:
+The embedding model changed without a versioned collection migration and the deployment validation checked only endpoint syntax.; Perform no writes, mark the operation failed with a safe dimension error, review collection metadata without logging credentials, and plan a separately approved versioned migration. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+baseline-concise,baseline-concise-v1,concise,ae-apo-034-qdrant-collection-safety-procedure,operational_procedure,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,114,1150,1264,6,1270,0.00032350,False,0.1688,"Answer:
+Freeze the affected scope. [S1]"
+baseline-concise,baseline-concise-v1,detailed,ae-apo-034-qdrant-collection-safety-procedure,operational_procedure,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,114,1150,1264,22,1286,0.00034350,False,0.17,"Answer:
+Freeze the affected scope.; Capture a safe baseline. [S1]. Validate these points against the scoped evidence before making an operational decision."
+grounded-evidence-first,grounded-evidence-first-v1,concise,ae-apo-034-qdrant-collection-safety-procedure,operational_procedure,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,137,1150,1287,51,1338,0.00038550,False,0.1812,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Verify credential-free HTTPS root URL, secret ARN rather than value, lazy client composition, collection name, dimensions, distance metric, deterministic IDs, payload scope, and no secret logging. [S1]
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+grounded-evidence-first,grounded-evidence-first-v1,detailed,ae-apo-034-qdrant-collection-safety-procedure,operational_procedure,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,137,1150,1287,63,1350,0.00040050,False,0.1783,"Answer:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Verify credential-free HTTPS root URL, secret ARN rather than value, lazy client composition, collection name, dimensions, distance metric, deterministic IDs, payload scope, and no secret logging. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Uncertainty:
+No additional uncertainty required by this case."
+structured-troubleshooting,structured-troubleshooting-v1,concise,ae-apo-034-qdrant-collection-safety-procedure,operational_procedure,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,False,True,True,134,1150,1284,27,1311,0.00035475,False,0.1729,"Assessment:
+Freeze the affected scope.; Capture a safe baseline. [S1]
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
+structured-troubleshooting,structured-troubleshooting-v1,detailed,ae-apo-034-qdrant-collection-safety-procedure,operational_procedure,advanced,False,sha256:5d831349ecb9f2c22c8128eb62de080e3bb945e4356498775b1fc2061a2cc1ea,S1,S1,True,True,True,True,True,True,True,True,True,True,True,True,134,1150,1284,70,1354,0.00040850,False,0.1777,"Assessment:
+Freeze the affected scope.; Capture a safe baseline.; Reconcile detailed outputs before readiness.; Verify credential-free HTTPS root URL, secret ARN rather than value, lazy client composition, collection name, dimensions, distance metric, deterministic IDs, payload scope, and no secret logging. [S1]. Validate these points against the scoped evidence before making an operational decision.
+
+Evidence:
+[S1]
+
+Steps:
+1. Confirm evidence.
+2. Validate scope.
+3. Test non-destructively.
+
+Safety:
+Use non-destructive validation steps."
