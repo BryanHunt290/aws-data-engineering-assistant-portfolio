@@ -718,7 +718,7 @@ LICENSE                         MIT license
 - [x] Publish LLM/prompt comparison results
 - [x] Add monitoring/feedback charts using synthetic or redacted data
 - [ ] Record a setup and application walkthrough
-- [ ] Confirm a successful workflow run from a fresh public clone
+- [x] Confirm a successful workflow run from a fresh public clone
 - [ ] Revalidate the Bedrock price catalog before any Bedrock demonstration
 - [x] Review the current Zoomcamp rubric and submission links
 

@@ -49,17 +49,17 @@ offline evidence as production-model quality.
 | Knowledge ingestion | Implemented with an optional AWS trigger | [Knowledge layer](KNOWLEDGE_LAYER.md), [event-driven ingestion](EVENT_DRIVEN_INGESTION.md), `knowledge/ingestion.py`, `knowledge/event_ingestion.py`, `knowledge/pdf_extraction.py` | Metadata, checksums, chunks, manifest, S3 ObjectCreated handling, idempotency, scoped IAM, retries, pending embedding state, and offline text-based PDF extraction | Capture a sanitized deployed ingestion example; OCR and DOCX parsing remain deferred | Sanitized ingestion example |
 | Monitoring and feedback | Implemented as offline synthetic evidence | [Monitoring and feedback analysis](MONITORING_AND_FEEDBACK.md), reviewed JSONL fixture, aggregate JSON/Markdown/CSV, six labeled PNG charts, and the Streamlit offline monitoring page | Typed scoped events, append-only local sink, 275 synthetic events, latency/cost/quality/safety/feedback metrics, privacy boundaries, and reviewer-facing evidence | Production persistence, alerting, retention, and dashboards require a separate reviewed design | Reviewed fixture, metrics, charts, and offline page |
 | Containerization | Implemented | [Containerization](CONTAINERIZATION.md), `Dockerfile`, `compose.yaml` | Non-root Python 3.12 image, health check, offline default, Compose, Bedrock opt-in | Capture final build/health evidence; optionally add scanning or SBOM | Build log and health screenshot |
-| Reproducibility | Implemented locally | `requirements.txt`, `requirements-dev.txt`, `constraints.txt`, scoped `pytest.ini`, CI workflow, deterministic providers | CI targets `main`, scopes tests to `tests/`, validates the dataset and its test split, synthesizes without lookups, and builds the constrained container | Repeat the full clean-clone/Docker/Streamlit verification and confirm hosted CI | Green GitHub Actions run |
+| Reproducibility | Implemented and publicly validated | `requirements.txt`, `requirements-dev.txt`, `constraints.txt`, scoped `pytest.ini`, CI workflow, deterministic providers | CI targets `main`, scopes tests to `tests/`, validates the dataset and its test split, synthesizes without lookups, and builds the constrained container | Optional Docker health screenshot and walkthrough video | Green GitHub Actions run |
 | Engineering best practices | Implemented | Offline test suite, typed provider boundaries, configuration validation, structured logging, scoped retrieval, safety gates, documentation | Strong modularity, tests, security boundaries, and no secrets in configuration | Add public issue/PR templates only if project contribution volume warrants them | Test report and architecture docs |
 | Cloud deployment bonus | Partial evidence | [Infrastructure](INFRASTRUCTURE.md), AWS CDK stack and synth tests | Reproducible AWS infrastructure definition with legacy stack compatibility | Provide sanitized deployment evidence or a reviewed hosted demo; no public service is currently claimed | Sanitized CloudFormation output or demo URL |
 
 ## Required evidence before submission
 
-- [ ] Publish a sanitized, squashed snapshot to a dedicated public portfolio
+- [x] Publish a sanitized, squashed snapshot to a dedicated public portfolio
   repository and verify it from a signed-out browser. Do not make the current
   private repository public because its earlier documentation history contains
   local workstation identity text that is absent from the reviewed snapshot.
-- [ ] Run the complete release verification from a clean clone.
+- [x] Run the complete release verification from a clean clone.
 - [x] Publish retrieval comparisons for semantic, keyword, and hybrid methods.
 - [x] Connect the 36-document dataset test split to retrieval and answer evaluation.
 - [x] Publish an LLM/prompt comparison with selection rationale.
@@ -67,16 +67,15 @@ offline evidence as production-model quality.
 - [x] Add reviewed offline UI screenshots listed in [images/README.md](images/README.md).
 - [ ] Add the Docker health capture after Docker Desktop is running.
 - [ ] Record a concise setup and application walkthrough.
-- [ ] Link a successful hosted CI run.
+- [x] Link a successful hosted CI run through the repository's **Actions** tab.
 - [x] Recheck the current Zoomcamp rubric and use its exact scoring terminology.
 
 ## Submission form fields
 
 - **Project title:** AWS Data Engineering Assistant: a scoped RAG assistant for
   pipeline design and troubleshooting
-- **Repository URL:** create a dedicated public portfolio repository from the
-  validated squashed snapshot, verify it from a signed-out browser, and paste
-  its HTTPS URL
+- **Repository URL:**
+  `https://github.com/BryanHunt290/aws-data-engineering-assistant-portfolio`
 - **Commit hash:** create the submission commit after validation and paste the
   full 40-character hash from `git rev-parse HEAD`
 - **Immutable review URL:** append `/tree/<full-commit-hash>` to the public
